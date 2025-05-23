@@ -84,6 +84,11 @@ The `backend` is a simple go http service. It prints the headers it gets to make
 
 * Clone this repo
 * You'll also need a local copy of lyft's ratelimit. Just clone te ratelimit repo `git clone git@github.com:lyft/ratelimit.git`
+* Make a symlink so that it points to the cloned ratelimit repo:
+```
+$ ls -lah ratelimiter
+lrwxrwxrwx 1 ondrej ondrej 27 dub 17 09:54 ratelimiter -> ../../envoyproxy/ratelimit/
+```
 * Run `docker-compose up`. The first one will take some time as it builds everything or pass `--build` to rebuild the code.
 
 # Testing
